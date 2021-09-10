@@ -114,11 +114,21 @@
   </body>
   <noscript><img height="1" width="1" style="display: none" src="https://www.facebook.com/tr?id=776877176532472&ev=PageView&noscript=1" /></noscript>
   <script>
+    var arr = ['https://sansanexpt.en.alibaba.com/productgrouplist-902428892/Lady_s_lace_coat.html?spm=a2700.shop_index.88.12','https://sansanexpt.en.alibaba.com/productgrouplist-902467274/Lady_suit.html?spm=a2700.shop_plgr.98.4','https://sansanexpt.en.alibaba.com/productgrouplist-902419283/Lady_s_lace_pajamas.html?spm=a2700.shop_plgr.98.5']
+    function getRandomInt(min, max) {
+      min = Math.ceil(min);
+      max = Math.floor(max);
+      return Math.floor(Math.random() * (max - min)) + min; //不含最大值，含最小值
+    }
+    var index = getRandomInt(0, 3);
+    var link = arr[index]
+    console.log("🚀 ~ file: index.html ~ line 125 ~ link", link)
     function onClick() {
       fbq("track", "Purchase", {
         value: 83.00,
         currency: "USD",
       });
+      window.open(link)
     }
   </script>
 </html>
